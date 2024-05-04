@@ -1,6 +1,14 @@
+import { useEffect } from "react";
 import Form from "./components/Form"
+import { useCriptoStore } from "./store"
 
 const App = () => {
+
+  const { fetchCriptos } = useCriptoStore()
+
+  useEffect(() => {
+    fetchCriptos()
+  }, []);
 
   return (
     <>
