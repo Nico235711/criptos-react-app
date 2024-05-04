@@ -1,3 +1,4 @@
+import Form from "./components/Form"
 
 const App = () => {
 
@@ -6,7 +7,7 @@ const App = () => {
       <div className="container">
         <h1 className="app-title">Cotizador de <span>Criptomonedas</span></h1>
         <div className="content">
-          1
+          <Form />
         </div>
       </div>
     </>
