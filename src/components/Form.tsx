@@ -12,7 +12,7 @@ const initialState = {
 const Form = () => {
   const [pair, setPair] = useState<Pair>(initialState)
   const [alert, setAlert] = useState("")
-  const { crytoscurrencies } = useCriptoStore()
+  const { crytoscurrencies, fetchData } = useCriptoStore()
 
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setPair({
@@ -28,6 +28,10 @@ const Form = () => {
       setAlert("Todos los campos son obligatorios")
       return
     }
+
+    setAlert("")
+    // consultar api
+    fetchData(pair)
   }
 
   return (
