@@ -76,3 +76,13 @@ body {
     background-color: #0cb378;
   }
 }
+
+.alert {
+  background-color: #ad2626;
+  color: var(--white);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-radius: .5rem;
+}
