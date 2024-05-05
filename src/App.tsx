@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 import Form from "./components/Form"
 import { useCriptoStore } from "./store"
+import CryptoDetail from "./components/CryptoDetail";
+import Spinner from "./components/Spinner";
 
 const App = () => {
 
-  const { fetchCriptos } = useCriptoStore()
+  const { loading, fetchCriptos } = useCriptoStore()
 
   useEffect(() => {
     fetchCriptos()
@@ -16,6 +18,8 @@ const App = () => {
         <h1 className="app-title">Cotizador de <span>Criptomonedas</span></h1>
         <div className="content">
           <Form />
+          {loading && <Spinner />}
+          <CryptoDetail />
         </div>
       </div>
     </>

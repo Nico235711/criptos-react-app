@@ -86,3 +86,18 @@ body {
   text-transform: uppercase;
   border-radius: .5rem;
 }
+
+.container-flex {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 5rem;
+}
+
+.container-flex img {
+  width: 20rem;
+}
+
+.container-flex span {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
